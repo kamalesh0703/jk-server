@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev":"nodemon server.js",
+    "dev":"node server.js",
     "build":"npm i"
   },
   "author": "",
