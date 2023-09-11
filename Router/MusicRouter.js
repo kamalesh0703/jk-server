@@ -2,7 +2,6 @@ let express = require("express");
 let multer = require("multer");
 let router = express.Router();
 let MusicSchema = require("../Model/MusicModel");
-const BaseUrl = "localhost:5000/upload/audio/";
 
 const storage = multer.diskStorage({
   filename: function (req, audio, cb) {
@@ -23,7 +22,7 @@ router.post("/uploadMusic", upload.single("audio"), (req, res) => {
       description: description,
       coverAlbum: coverAlbum,
       artist: artist,
-      url: `http://localhost:5002/upload/audio/${title}.mp3`,
+      url: `https://juke-stream-server-side.onrender.com/${title}.mp3`,
       id:id,
       playlist:""
     },
