@@ -22,7 +22,7 @@ router.post("/uploadMusic", upload.single("audio"), (req, res) => {
       description: description,
       coverAlbum: coverAlbum,
       artist: artist,
-      url: `https://juke-stream-server-side.onrender.com/${title}.mp3`,
+      url: `https://juke-stream-server-side.onrender.com/upload/audio/${title}.mp3`,
       id:id,
       playlist:""
     },
